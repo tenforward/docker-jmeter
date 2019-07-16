@@ -12,7 +12,7 @@ RUN	apt-get update \
 	&& apt-get -y upgrade \
 	&& apt-get -y install openjdk-11-jre curl \
 	&& mkdir -p /tmp/download \
-	&& curl -L --silent ${JMETER_URL} > /tmp/download/apache-jmeter-${JMETER_VERSION}.tgz \
+	&& curl -L ${JMETER_URL} > /tmp/download/apache-jmeter-${JMETER_VERSION}.tgz \
 	&& mkdir -p /opt \
 	&& tar xvf /tmp/download/apache-jmeter-${JMETER_VERSION}.tgz -C /opt \
 	&& rm -rf /tmp/download

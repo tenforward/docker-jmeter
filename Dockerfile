@@ -13,7 +13,7 @@ ENV	TZ $TZ
 RUN	echo $TZ > /etc/timezone \
 	&& apt-get update \
 	&& apt-get -y upgrade \
-	&& apt-get -y install openjdk-11-jre curl tzdata \
+	&& apt-get -y install openjdk-11-jre curl tzdata jq \
 	&& mkdir -p /tmp/download \
 	&& curl -L ${JMETER_URL} > /tmp/download/apache-jmeter-${JMETER_VERSION}.tgz \
 	&& mkdir -p /opt \
